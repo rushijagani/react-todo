@@ -1,2 +1,3 @@
-# react-todo
-React TODO app with Hooks
+# React TODO app with Hooks
+
+## Introduction
