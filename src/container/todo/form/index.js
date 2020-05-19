@@ -3,7 +3,6 @@ import React, { PropTypes, useState, useRef } from 'react';
 import './form.scss';
 
 const TodoForm = ({ click }) => {
-console.log(typeof(click));
 
     const [input, setInput] = useState('');
     const ref= useRef();
