@@ -1,4 +1,5 @@
-import React, { PropTypes, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 import './form.scss';
 
@@ -23,14 +24,14 @@ const TodoForm = ({ click }) => {
           event.stopPropagation();
           handleSubmit();
         }
-      }
+    }
 
     return (
     	<div className="todo-form">
             <input 
                 type="text"
                 name="todo-input"
-                placeholder="Add Todo"
+                placeholder="Add New"
                 value={input}
                 ref={ref}
                 onChange={handleChange}
@@ -44,7 +45,7 @@ const TodoForm = ({ click }) => {
 TodoForm.displayName = 'TodoForm';
 
 TodoForm.propTypes = {
-    // click: PropTypes.func,
+    click: PropTypes.func,
 };
 
 export default TodoForm;
