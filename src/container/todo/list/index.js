@@ -25,10 +25,10 @@ const TodoList = ({ items, add, completed, remove }) => {
     const allListResult = items.length ? items.map(item => (
         <li key={item.id}>
         {item.text}
-            <a href="/#" className="todo__action-wrap" title="Complete" onClick={() => add(item)}>
+            <a href="#" className="todo__action-wrap" title="Complete" onClick={() => add(item)}>
                 <span className="todo__action-check-icon"></span>
             </a>
-            <a href="/#" className="todo__action-wrap close" title="Remove" onClick={() => remove(item)}>
+            <a href="#" className="todo__action-wrap close" title="Remove" onClick={() => remove(item)}>
                 <span className="todo__action-close-icon"></span>
             </a>
         </li>
@@ -37,7 +37,7 @@ const TodoList = ({ items, add, completed, remove }) => {
     const allCompletedListResult = completed.length ? completed.map(item => (
         <li key={item.id}>
             {item.text}
-            <a href="/#" className="todo__action-wrap close" title="Remove" onClick={() => remove(item)}>
+            <a href="#" className="todo__action-wrap close" title="Remove" onClick={() => remove(item)}>
                 <span className="todo__action-close-icon"></span>
             </a>
         </li>
@@ -51,8 +51,8 @@ const TodoList = ({ items, add, completed, remove }) => {
         <div className="todo__lists">
             <div className="todo__cat">
                 <div className="todo__counter">{itemCount}</div>
-                <a href="/#" onClick={activeViewHandler} className={`todo__cat-list ${activeView ? `active`: ``}`}>ALL</a>
-                <a href="/#" onClick={completedViewHandler} className={`todo__cat-list ${completedView ? `active`: ``}`}>Completed</a>
+                <a href="#" onClick={activeViewHandler} className={`todo__cat-list ${activeView ? `active`: ``}`}>ALL</a>
+                <a href="#" onClick={completedViewHandler} className={`todo__cat-list ${completedView ? `active`: ``}`}>Completed</a>
             </div>
             <ul className="todo__list">
                 {activeView && allListResult }
