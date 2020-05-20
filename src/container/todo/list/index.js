@@ -1,61 +1,75 @@
-import React, { PropTypes, useState } from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
 
 import './list.scss';
 
-const TodoList = ({ value, click, completed }) => {
+const TodoList = ({ items, add, completed, remove }) => {
 
-    const [allView, setAllView] = useState(true);
+    const [activeView, setActiveView] = useState(true);
     const [completedView, setCompletedView] = useState(false);
-    const hasList = value.length > 0 || completed.length > 0;
-    const hasCompletedList = completed.length > 0;
+    const hasList = items.length > 0 || completed.length > 0;
+    const allList =  (Number)(items.length + completed.length);
 
-
-    const allViewHandler = () => {
-        setAllView(true);
+    const activeViewHandler = () => {
+        setActiveView(true);
         setCompletedView(false);
     }
     const completedViewHandler = () => {
         setCompletedView(true);
-        setAllView(false);
+        setActiveView(false);
     }
+    
+    const noItems = <span className="todo__no-items">There are no items.</span>;
+
+    const allListResult = items.length ? items.map(item => (
+        <li key={item.id}>
+        {item.text}
+            <a href="/#" className="todo__action-wrap" title="Complete" onClick={() => add(item)}>
+                <span className="todo__action-check-icon"></span>
+            </a>
+            <a href="/#" className="todo__action-wrap close" title="Remove" onClick={() => remove(item)}>
+                <span className="todo__action-close-icon"></span>
+            </a>
+        </li>
+    )) : noItems;
+
+    const allCompletedListResult = completed.length ? completed.map(item => (
+        <li key={item.id}>
+            {item.text}
+            <a href="/#" className="todo__action-wrap close" title="Remove" onClick={() => remove(item)}>
+                <span className="todo__action-close-icon"></span>
+            </a>
+        </li>
+    )) : noItems;
+
+    const itemCount = <span>{allList > 1 ? ` ${allList} items` : ` ${allList} item`}</span>;
 
 
     return (
+        hasList && (
         <div className="todo__lists">
-            {hasList &&
+            <div className="todo__cat">
+                <div className="todo__counter">{itemCount}</div>
+                <a href="/#" onClick={activeViewHandler} className={`todo__cat-list ${activeView ? `active`: ``}`}>ALL</a>
+                <a href="/#" onClick={completedViewHandler} className={`todo__cat-list ${completedView ? `active`: ``}`}>Completed</a>
+            </div>
             <ul className="todo__list">
-                {allView && value.map(item => (
-                    <li key={item.id}>
-                    {item.text}
-                        <div className="todo__check-wrap"  onClick={() => click(item)}>
-                            <span className="todo__check-icon"></span>
-                        </div>
-                    </li>
-                ))}
-                {hasCompletedList && completedView  && completed.map(item => (
-                    <li key={item.id}>{item.text}</li>
-                    ))
-                }
+                {activeView && allListResult }
+                {completedView && allCompletedListResult }
             </ul>
-            }
-            {hasList && (
-                <div className="todo__cat">
-                    <span onClick={allViewHandler} className={` ${allView ? `active`: ``}`}>ALL</span>
-                    {hasCompletedList  &&
-                        <span onClick={completedViewHandler} className={` ${completedView ? `active`: ``}`}>Completed</span>
-                    }
-                </div>
-            ) }
-        </div>
+            </div>
+        )
     );
 };
 
 TodoList.displayName = 'TodoList';
 
 TodoList.propTypes = {
-    // value: PropTypes.array,
-    // completed: PropTypes.array,
-    // click: PropTypes.func,
+    value: PropTypes.array,
+    completed: PropTypes.array,
+    add: PropTypes.func,
+    remove: PropTypes.func,
 };
 
 export default TodoList;
