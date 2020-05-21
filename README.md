@@ -42,4 +42,4 @@ yarn run build
 Built by [Rushi Jagani](http://rushijagani.github.io/)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/binaryjim/react-tasks-app/blob/master/license.txt) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rushijagani/react-todo/blob/master/license.txt) file for details
