@@ -33,7 +33,7 @@ yarn run build
 - [React](https://reactjs.org/) - JavaScript UI development library
 - [React Redux](https://react-redux.js.org/) - A predictable state container for JavaScript applications(React)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html) - React Hooks
-- [Sass](https://sass-lang.com/) - CSS extension language
+- [MATERIAL-UI](https://material-ui.com/) - React components for faster and easier web development. Build your own design system, or start with Material Design.
 
 ## Author
 Built by [Rushi Jagani](http://rushijagani.github.io/)
