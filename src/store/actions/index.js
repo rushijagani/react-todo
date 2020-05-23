@@ -4,6 +4,10 @@ export const addTodo = text => ({
   id: nextTodoId++,
   text
 })
+export const deleteTodo = id => ({
+  type: 'DELETE_TODO',
+  id
+})
 
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',

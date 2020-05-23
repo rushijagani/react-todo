@@ -31,6 +31,7 @@ yarn run build
 
 ## Built with
 - [React](https://reactjs.org/) - JavaScript UI development library
+- [React Redux](https://react-redux.js.org/) - A predictable state container for JavaScript applications(React)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html) - React Hooks
 - [Sass](https://sass-lang.com/) - CSS extension language
 
