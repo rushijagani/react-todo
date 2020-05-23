@@ -1,4 +1,4 @@
-# React TODO app with Hooks
+# React TODO app with Redux
 [ReactJS](https://reactjs.org/) based responsive task listing single page application.
 
 **Demo:**  
@@ -32,7 +32,7 @@ yarn run build
 ## Built with
 - [React](https://reactjs.org/) - JavaScript UI development library
 - [React Redux](https://react-redux.js.org/) - A predictable state container for JavaScript applications(React)
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html) - React Hooks
+
 - [MATERIAL-UI](https://material-ui.com/) - React components for faster and easier web development. Build your own design system, or start with Material Design.
 
 ## Author
