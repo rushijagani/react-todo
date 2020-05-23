@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const App = () => (
   <Container maxWidth="sm" style={{ marginTop: '20px'}}>
-    <Box boxShadow={1} style={{ textAlign: 'center', padding: '40px', color: '#555'}}>
+    <Box boxShadow={1} style={{ textAlign: 'center', padding: '10px', color: '#555'}}>
       <Typography variant="h4" gutterBottom fontWeight="fontWeightBold">
           <b>Add TODO</b>
           <Box p={1} />

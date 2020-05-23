@@ -13,7 +13,14 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 const THEME = createMuiTheme({
   typography: {
    "fontFamily": `-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji`,
-  }
+  },
+  overrides: {
+    MuiButton: {
+      root: {
+        margin: '5px 0 5px',
+      },
+    },
+  },
 });
 
 const store = createStore(

@@ -17,6 +17,7 @@ const AddTodo = ({ dispatch }) => {
           }
           dispatch(addTodo(input.value))
           input.value = ''
+          input.focus()
         }}
       >
         <Input inputRef={node => (input = node)} />
