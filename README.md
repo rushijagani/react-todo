@@ -40,5 +40,9 @@ yarn run build
 ## Author
 Built by [Rushi Jagani](http://rushijagani.github.io/)
 
+## Credits
+- Icons made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from [flaticon](https://www.flaticon.com/)
+- Icons made by [Freepik](https://www.flaticon.com/authors/freepik) from [flaticon](https://www.flaticon.com/)
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/binaryjim/react-tasks-app/blob/master/license.txt) file for details
