@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import configureStore  from './store/configureStore';
 
-import rootReducer from './store/reducers';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
@@ -23,9 +22,7 @@ const THEME = createMuiTheme({
   },
 });
 
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = configureStore();
 
 ReactDOM.render(
   <MuiThemeProvider theme={THEME}>

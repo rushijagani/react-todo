@@ -1,9 +1,10 @@
 # React TODO app with Redux
-[ReactJS](https://reactjs.org/) based responsive task listing single page application.
+[ReactJS](https://reactjs.org/) based responsive Add Todo task single page application with data persistence support using local storage.
 
 **Demo:**  
 [https://rushijagani.github.io/react-todo/](https://rushijagani.github.io/react-todo/)
-
+You can also use it from any device you have from your browser.
+Start making your own Todo List and when you revisite the site you can see your existing Todo list without SignUp/Login/Registeration.
 
 ## Getting started
 
@@ -32,6 +33,7 @@ yarn run build
 ## Built with
 - [React](https://reactjs.org/) - JavaScript UI development library
 - [React Redux](https://react-redux.js.org/) - A predictable state container for JavaScript applications(React)
+- [Lodash](https://lodash.com/) - A modern JavaScript utility library delivering modularity, performance & extras.
 
 - [MATERIAL-UI](https://material-ui.com/) - React components for faster and easier web development. Build your own design system, or start with Material Design.
 

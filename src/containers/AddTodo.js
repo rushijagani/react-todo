@@ -20,7 +20,7 @@ const AddTodo = ({ dispatch }) => {
           input.focus()
         }}
       >
-        <Input inputRef={node => (input = node)} />
+        <Input inputRef={node => (input = node)}  style={{width: '70%'}} />
         <Button variant="contained" color="primary" type="submit" style={{marginLeft: '10px'}}>Add Todo</Button>
       </form>
     </div>

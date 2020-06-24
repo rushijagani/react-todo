@@ -6,8 +6,8 @@
   import Checkbox from '@material-ui/core/Checkbox';
   import DeleteIcon from '@material-ui/icons/Delete';
   const Todo = ({ onClick, completed, text, onClickRemove }) => (
-    <div style={{ position:'relative', width: '100%', display: 'block', textAlign:'left'}} >
-      <FormControlLabel style={{ textDecoration: completed ? 'line-through' : 'none' }}
+    <div style={{ position:'relative', width: '100%', display: 'block', textAlign:'left', padding:'5px 0', borderWidth:'0 0 1px 0', borderStyle:'solid', borderColor: '#333'}} >
+      <FormControlLabel style={{ textDecoration: completed ? 'line-through' : 'none', marginRight:'50px' }}
       control={
         <Checkbox
         checked={completed}
@@ -18,7 +18,7 @@
         }
         label={text}
         />
-        <Button onClick={onClickRemove} style={{ position: 'absolute', top: '8px', right:'0'}}>
+        <Button onClick={onClickRemove} style={{ position: 'absolute', top: '0', right:'0'}}>
           <DeleteIcon />
         </Button>
       </div>
