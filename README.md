@@ -3,8 +3,10 @@
 
 **Demo:**  
 [https://rushijagani.github.io/react-todo/](https://rushijagani.github.io/react-todo/)
-You can also use it from any device you have from your browser.
+
 Start making your own Todo List and when you revisite the site you can see your existing Todo list without SignUp/Login/Registeration.
+
+You can also use it from any device you have from your browser.
 
 ## Getting started
 
